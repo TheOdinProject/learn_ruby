@@ -2,9 +2,11 @@ def echo(str)
   str
 end
 
+
 def shout(str)
   str.upcase
 end
+
 
 def repeat(str, times=0)
   count = 1
@@ -22,13 +24,16 @@ def repeat(str, times=0)
   end
 end
 
+
 def start_of_word(word, num)
   starter = word.slice(0..num-1)
 end
 
+
 def first_word(str)
   first = str.split.first
 end
+
 
 def titleize(str)
   word_array = str.split(' ')
