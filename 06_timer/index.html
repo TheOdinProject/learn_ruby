@@ -17,8 +17,17 @@
         <li><a href="../02_calculator/index.html">02 Calculator</a></li>
         <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
         <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
-        <li><a href="../05_book_titles/index.html">05 Book Titles</a></li>
-        <li>06 Timer</li>
+        <li><a href="../05_silly_blocks/index.html">05 Silly Blocks</a></li>
+        <li><a href="../06_performance_monitor/index.html">06 Performance Monitor</a></li>
+        <li><a href="../07_hello_friend/index.html">07 Hello Friend</a></li>
+        <li><a href="../08_book_titles/index.html">08 Book Titles</a></li>
+        <li>09 Timer</li>
+        <li><a href="../10_temperature_object/index.html">10 Temperature Object</a></li>
+        <li><a href="../11_dictionary/index.html">11 Dictionary</a></li>
+        <li><a href="../12_rpn_calculator/index.html">12 Rpn Calculator</a></li>
+        <li><a href="../13_xml_document/index.html">13 Xml Document</a></li>
+        <li><a href="../14_array_extensions/index.html">14 Array Extensions</a></li>
+        <li><a href="../15_in_words/index.html">15 In Words</a></li>
       </ul>
     </div>
     <h1>timer</h1>
@@ -46,28 +55,28 @@ describe &quot;Timer&quot; do
   end
 
   it &quot;should initialize to 0 seconds&quot; do
-    expect(@timer.seconds).to eq(0)
+    @timer.seconds.should == 0
   end
 
   describe 'time_string' do
     it &quot;should display 0 seconds as 00:00:00&quot; do
       @timer.seconds = 0
-      expect(@timer.time_string).to eq(&quot;00:00:00&quot;)
+      @timer.time_string.should == &quot;00:00:00&quot;
     end
 
     it &quot;should display 12 seconds as 00:00:12&quot; do
       @timer.seconds = 12
-      expect(@timer.time_string).to eq(&quot;00:00:12&quot;)
+      @timer.time_string.should == &quot;00:00:12&quot;
     end
 
     it &quot;should display 66 seconds as 00:01:06&quot; do
       @timer.seconds = 66
-      expect(@timer.time_string).to eq(&quot;00:01:06&quot;)
+      @timer.time_string.should == &quot;00:01:06&quot;
     end
 
     it &quot;should display 4000 seconds as 01:06:40&quot; do
       @timer.seconds = 4000
-      expect(@timer.time_string).to eq(&quot;01:06:40&quot;)
+      @timer.time_string.should == &quot;01:06:40&quot;
     end
   end
 
@@ -78,13 +87,13 @@ describe &quot;Timer&quot; do
   #
   # describe 'padded' do
   #   it 'pads zero' do
-  #     expect(@timer.padded(0)).to eq('00')
+  #     @timer.padded(0).should == '00'
   #   end
   #   it 'pads one' do
-  #     expect(@timer.padded(1)).to eq('01')
+  #     @timer.padded(1).should == '01'
   #   end
   #   it &quot;doesn't pad a two-digit number&quot; do
-  #     expect(@timer.padded(12)).to eq('12')
+  #     @timer.padded(12).should == '12'
   #   end
   # end
 
@@ -95,3 +104,5 @@ end</pre>
     <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
   </body>
 </html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status H

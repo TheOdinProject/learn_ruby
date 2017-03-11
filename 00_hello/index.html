@@ -17,8 +17,17 @@
         <li><a href="../02_calculator/index.html">02 Calculator</a></li>
         <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
         <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
-        <li><a href="../05_book_titles/index.html">05 Book Titles</a></li>
-        <li><a href="../06_timer/index.html">06 Timer</a></li>
+        <li><a href="../05_silly_blocks/index.html">05 Silly Blocks</a></li>
+        <li><a href="../06_performance_monitor/index.html">06 Performance Monitor</a></li>
+        <li><a href="../07_hello_friend/index.html">07 Hello Friend</a></li>
+        <li><a href="../08_book_titles/index.html">08 Book Titles</a></li>
+        <li><a href="../09_timer/index.html">09 Timer</a></li>
+        <li><a href="../10_temperature_object/index.html">10 Temperature Object</a></li>
+        <li><a href="../11_dictionary/index.html">11 Dictionary</a></li>
+        <li><a href="../12_rpn_calculator/index.html">12 Rpn Calculator</a></li>
+        <li><a href="../13_xml_document/index.html">13 Xml Document</a></li>
+        <li><a href="../14_array_extensions/index.html">14 Array Extensions</a></li>
+        <li><a href="../15_in_words/index.html">15 In Words</a></li>
       </ul>
     </div>
     <h1>hello</h1>
@@ -31,7 +40,7 @@
 <pre><code>cd 00_hello
 </code></pre>
 
-<p>This directory is the starting point for this exercise. It contains a spec file and a ruby file to (eventually) make the specs pass.</p>
+<p>This directory is the starting point for this exercise. It contains a spec file and you'll be adding a ruby file to (eventually) make the specs pass.</p>
 
 <h2>Run the test</h2>
 
@@ -40,7 +49,23 @@
 
 <h2>Watch it fail</h2>
 
-<p>you should see an error like this:</p>
+<p>You should see an error. <strong>Don't get scared!</strong> Try to read it and figure out what the computer wants to tell you. Somewhere on the first line it should say something like</p>
+
+<pre><code>no such file to load -- test-first-teaching/hello/hello (LoadError)
+</code></pre>
+
+<p>That means that it is looking for a file called <code>hello.rb</code> and can't find it.</p>
+
+<h2>Create hello.rb</h2>
+
+<p>Open up <code>hello.rb</code> in a text editor. Save it. Run the test again.</p>
+
+<pre><code>rake
+</code></pre>
+
+<h2>Watch it fail</h2>
+
+<p>Now you should see an error like this:</p>
 
 <pre><code>the hello function
   says hello (FAILED - 1)
@@ -48,7 +73,7 @@
 Failures:
 
   1) the hello function says hello
-     Failure/Error: expect(hello).to eq("Hello!")
+     Failure/Error: hello.should == "Hello!"
      NameError:
        undefined local variable or method `hello' for #&lt;RSpec::Core::ExampleGroup::Nested_1:0x000001009b8808&gt;
      # ./hello/hello_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;'
@@ -74,9 +99,9 @@ end
 Failures:
 
   1) the hello function says hello
-     Failure/Error: expect(hello).to eq("Hello!")
+     Failure/Error: hello().should == "Hello!"
        expected: "Hello!"
-            got: nil (compared using ==)
+            got: nil (using ==)
      # ./hello/hello_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;'
 </code></pre>
 
@@ -98,9 +123,9 @@ end
 <p>Now you should see an error like this:</p>
 
 <pre><code>1) the hello function says hello
-   Failure/Error: expect(hello).to eq("Hello!")
+   Failure/Error: hello().should == "Hello!"
      expected: "Hello!"
-          got: "whuh?" (compared using ==)
+          got: "whuh?" (using ==)
    # ./hello/hello_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;'
 </code></pre>
 
@@ -139,17 +164,17 @@ end
 
 describe &quot;the hello function&quot; do
   it &quot;says hello&quot; do
-    expect(hello).to eq(&quot;Hello!&quot;)
+    hello.should == &quot;Hello!&quot;
   end
 end
 
 describe &quot;the greet function&quot; do
   it &quot;says hello to someone&quot; do
-    expect(greet(&quot;Alice&quot;)).to eq(&quot;Hello, Alice!&quot;)
+    greet(&quot;Alice&quot;).should == &quot;Hello, Alice!&quot;
   end
 
   it &quot;says hello to someone else&quot; do
-    expect(greet(&quot;Bob&quot;)).to eq(&quot;Hello, Bob!&quot;)
+    greet(&quot;Bob&quot;).should == &quot;Hello, Bob!&quot;
   end
 end</pre>
   </div>

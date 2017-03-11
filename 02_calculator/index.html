@@ -1,3 +1,21 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @Boscardin
+ Sign out
+ Watch 1
+  Star 0
+  Fork 0 ErikHP/test-first-ruby
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathtest-first-ruby/02_calculator/index.html
+bc6a196  on Aug 15, 2013
+@ErikHP ErikHP Successfully copy files from test-first-ruby
+1 contributor
+RawBlameHistory     
+147 lines (117 sloc)  4.62 KB
 <html>
   <head>
     <title>Test-First Teaching: learn_ruby: calculator</title>
@@ -17,8 +35,17 @@
         <li>02 Calculator</li>
         <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
         <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
-        <li><a href="../05_book_titles/index.html">05 Book Titles</a></li>
-        <li><a href="../06_timer/index.html">06 Timer</a></li>
+        <li><a href="../05_silly_blocks/index.html">05 Silly Blocks</a></li>
+        <li><a href="../06_performance_monitor/index.html">06 Performance Monitor</a></li>
+        <li><a href="../07_hello_friend/index.html">07 Hello Friend</a></li>
+        <li><a href="../08_book_titles/index.html">08 Book Titles</a></li>
+        <li><a href="../09_timer/index.html">09 Timer</a></li>
+        <li><a href="../10_temperature_object/index.html">10 Temperature Object</a></li>
+        <li><a href="../11_dictionary/index.html">11 Dictionary</a></li>
+        <li><a href="../12_rpn_calculator/index.html">12 Rpn Calculator</a></li>
+        <li><a href="../13_xml_document/index.html">13 Xml Document</a></li>
+        <li><a href="../14_array_extensions/index.html">14 Array Extensions</a></li>
+        <li><a href="../15_in_words/index.html">15 In Words</a></li>
       </ul>
     </div>
     <h1>calculator</h1>
@@ -69,39 +96,39 @@ require &quot;calculator&quot;
 
 describe &quot;add&quot; do
   it &quot;adds 0 and 0&quot; do
-    expect(add(0,0)).to eq(0)
+    add(0,0).should == 0
   end
 
   it &quot;adds 2 and 2&quot; do
-    expect(add(2,2)).to eq(4)
+    add(2,2).should == 4
   end
 
   it &quot;adds positive numbers&quot; do
-    expect(add(2,6)).to eq(8)
+    add(2,6).should == 8
   end
 end
 
 describe &quot;subtract&quot; do
   it &quot;subtracts numbers&quot; do
-    expect(subtract(10,4)).to eq(6)
+    subtract(10,4).should == 6
   end
 end
 
 describe &quot;sum&quot; do
   it &quot;computes the sum of an empty array&quot; do
-    expect(sum([])).to eq(0)
+    sum([]).should == 0
   end
 
   it &quot;computes the sum of an array of one number&quot; do
-    expect(sum([7])).to eq(7)
+    sum([7]).should == 7
   end
 
   it &quot;computes the sum of an array of two numbers&quot; do
-    expect(sum([7,11])).to eq(18)
+    sum([7,11]).should == 18
   end
 
   it &quot;computes the sum of an array of many numbers&quot; do
-    expect(sum([1,3,5,7,9])).to eq(25)
+    sum([1,3,5,7,9]).should == 25
   end
 end
 
@@ -135,3 +162,5 @@ end</pre>
     <div class="footer"><a href="http://testfirst.org">TestFirst.org</a></div>
   </body>
 </html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
