@@ -17,8 +17,17 @@
         <li><a href="../02_calculator/index.html">02 Calculator</a></li>
         <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
         <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
-        <li><a href="../05_book_titles/index.html">05 Book Titles</a></li>
-        <li><a href="../06_timer/index.html">06 Timer</a></li>
+        <li><a href="../05_silly_blocks/index.html">05 Silly Blocks</a></li>
+        <li><a href="../06_performance_monitor/index.html">06 Performance Monitor</a></li>
+        <li><a href="../07_hello_friend/index.html">07 Hello Friend</a></li>
+        <li><a href="../08_book_titles/index.html">08 Book Titles</a></li>
+        <li><a href="../09_timer/index.html">09 Timer</a></li>
+        <li><a href="../10_temperature_object/index.html">10 Temperature Object</a></li>
+        <li><a href="../11_dictionary/index.html">11 Dictionary</a></li>
+        <li><a href="../12_rpn_calculator/index.html">12 Rpn Calculator</a></li>
+        <li><a href="../13_xml_document/index.html">13 Xml Document</a></li>
+        <li><a href="../14_array_extensions/index.html">14 Array Extensions</a></li>
+        <li><a href="../15_in_words/index.html">15 In Words</a></li>
       </ul>
     </div>
     <h1>temperature</h1>
@@ -53,19 +62,19 @@ describe &quot;temperature conversion functions&quot; do
   describe &quot;#ftoc&quot; do
 
     it &quot;converts freezing temperature&quot; do
-      expect(ftoc(32)).to eq(0)
+      ftoc(32).should == 0
     end
 
     it &quot;converts boiling temperature&quot; do
-      expect(ftoc(212)).to eq(100)
+      ftoc(212).should == 100
     end
 
     it &quot;converts body temperature&quot; do
-      expect(ftoc(98.6)).to eq(37)
+      ftoc(98.6).should == 37
     end
 
     it &quot;converts arbitrary temperature&quot; do
-      expect(ftoc(68)).to eq(20)
+      ftoc(68).should == 20
     end
 
   end
@@ -73,19 +82,19 @@ describe &quot;temperature conversion functions&quot; do
   describe &quot;#ctof&quot; do
 
     it &quot;converts freezing temperature&quot; do
-      expect(ctof(0)).to eq(32)
+      ctof(0).should == 32
     end
 
     it &quot;converts boiling temperature&quot; do
-      expect(ctof(100)).to eq(212)
+      ctof(100).should == 212
     end
 
     it &quot;converts arbitrary temperature&quot; do
-      expect(ctof(20)).to eq(68)
+      ctof(20).should == 68
     end
 
     it &quot;converts body temperature&quot; do
-      expect(ctof(37)).to be_within(0.1).of(98.6)
+      ctof(37).should be_within(0.1).of(98.6)
       # Why do we need to use be_within?
       # See http://www.ruby-forum.com/topic/169330
       # and http://en.wikipedia.org/wiki/IEEE_754-2008

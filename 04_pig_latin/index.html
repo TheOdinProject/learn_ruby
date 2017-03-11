@@ -17,8 +17,17 @@
         <li><a href="../02_calculator/index.html">02 Calculator</a></li>
         <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
         <li>04 Pig Latin</li>
-        <li><a href="../05_book_titles/index.html">05 Book Titles</a></li>
-        <li><a href="../06_timer/index.html">06 Timer</a></li>
+        <li><a href="../05_silly_blocks/index.html">05 Silly Blocks</a></li>
+        <li><a href="../06_performance_monitor/index.html">06 Performance Monitor</a></li>
+        <li><a href="../07_hello_friend/index.html">07 Hello Friend</a></li>
+        <li><a href="../08_book_titles/index.html">08 Book Titles</a></li>
+        <li><a href="../09_timer/index.html">09 Timer</a></li>
+        <li><a href="../10_temperature_object/index.html">10 Temperature Object</a></li>
+        <li><a href="../11_dictionary/index.html">11 Dictionary</a></li>
+        <li><a href="../12_rpn_calculator/index.html">12 Rpn Calculator</a></li>
+        <li><a href="../13_xml_document/index.html">13 Xml Document</a></li>
+        <li><a href="../14_array_extensions/index.html">14 Array Extensions</a></li>
+        <li><a href="../15_in_words/index.html">15 In Words</a></li>
       </ul>
     </div>
     <h1>pig_latin</h1>
@@ -52,46 +61,46 @@ describe &quot;#translate&quot; do
 
   it &quot;translates a word beginning with a vowel&quot; do
     s = translate(&quot;apple&quot;)
-    expect(s).to eq(&quot;appleay&quot;)
+    s.should == &quot;appleay&quot;
   end
 
   it &quot;translates a word beginning with a consonant&quot; do
     s = translate(&quot;banana&quot;)
-    expect(s).to eq(&quot;ananabay&quot;)
+    s.should == &quot;ananabay&quot;
   end
 
   it &quot;translates a word beginning with two consonants&quot; do
     s = translate(&quot;cherry&quot;)
-    expect(s).to eq(&quot;errychay&quot;)
+    s.should == &quot;errychay&quot;
   end
 
   it &quot;translates two words&quot; do
     s = translate(&quot;eat pie&quot;)
-    expect(s).to eq(&quot;eatay iepay&quot;)
+    s.should == &quot;eatay iepay&quot;
   end
 
   it &quot;translates a word beginning with three consonants&quot; do
-    expect(translate(&quot;three&quot;)).to eq(&quot;eethray&quot;)
+    translate(&quot;three&quot;).should == &quot;eethray&quot;
   end
 
   it &quot;counts 'sch' as a single phoneme&quot; do
     s = translate(&quot;school&quot;)
-    expect(s).to eq(&quot;oolschay&quot;)
+    s.should == &quot;oolschay&quot;
   end
 
   it &quot;counts 'qu' as a single phoneme&quot; do
     s = translate(&quot;quiet&quot;)
-    expect(s).to eq(&quot;ietquay&quot;)
+    s.should == &quot;ietquay&quot;
   end
 
   it &quot;counts 'qu' as a consonant even when it's preceded by a consonant&quot; do
     s = translate(&quot;square&quot;)
-    expect(s).to eq(&quot;aresquay&quot;)
+    s.should == &quot;aresquay&quot;
   end
 
   it &quot;translates many words&quot; do
     s = translate(&quot;the quick brown fox&quot;)
-    expect(s).to eq(&quot;ethay ickquay ownbray oxfay&quot;)
+    s.should == &quot;ethay ickquay ownbray oxfay&quot;
   end
 
   # Test-driving bonus:

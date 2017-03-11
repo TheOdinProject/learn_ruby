@@ -17,8 +17,17 @@
         <li><a href="../02_calculator/index.html">02 Calculator</a></li>
         <li><a href="../03_simon_says/index.html">03 Simon Says</a></li>
         <li><a href="../04_pig_latin/index.html">04 Pig Latin</a></li>
-        <li>05 Book Titles</li>
-        <li><a href="../06_timer/index.html">06 Timer</a></li>
+        <li><a href="../05_silly_blocks/index.html">05 Silly Blocks</a></li>
+        <li><a href="../06_performance_monitor/index.html">06 Performance Monitor</a></li>
+        <li><a href="../07_hello_friend/index.html">07 Hello Friend</a></li>
+        <li>08 Book Titles</li>
+        <li><a href="../09_timer/index.html">09 Timer</a></li>
+        <li><a href="../10_temperature_object/index.html">10 Temperature Object</a></li>
+        <li><a href="../11_dictionary/index.html">11 Dictionary</a></li>
+        <li><a href="../12_rpn_calculator/index.html">12 Rpn Calculator</a></li>
+        <li><a href="../13_xml_document/index.html">13 Xml Document</a></li>
+        <li><a href="../14_array_extensions/index.html">14 Array Extensions</a></li>
+        <li><a href="../15_in_words/index.html">15 In Words</a></li>
       </ul>
     </div>
     <h1>book_titles</h1>
@@ -53,52 +62,52 @@ describe Book do
   describe 'title' do
     it 'should capitalize the first letter' do
       @book.title = &quot;inferno&quot;
-      expect(@book.title).to eq(&quot;Inferno&quot;)
+      @book.title.should == &quot;Inferno&quot;
     end
 
     it 'should capitalize every word' do
       @book.title = &quot;stuart little&quot;
-      expect(@book.title).to eq(&quot;Stuart Little&quot;)
+      @book.title.should == &quot;Stuart Little&quot;
     end
 
     describe 'should capitalize every word except...' do
       describe 'articles' do
         specify 'the' do
           @book.title = &quot;alexander the great&quot;
-          expect(@book.title).to eq(&quot;Alexander the Great&quot;)
+          @book.title.should == &quot;Alexander the Great&quot;
         end
 
         specify 'a' do
           @book.title = &quot;to kill a mockingbird&quot;
-          expect(@book.title).to eq(&quot;To Kill a Mockingbird&quot;)
+          @book.title.should == &quot;To Kill a Mockingbird&quot;
         end
 
         specify 'an' do
           @book.title = &quot;to eat an apple a day&quot;
-          expect(@book.title).to eq(&quot;To Eat an Apple a Day&quot;)
+          @book.title.should == &quot;To Eat an Apple a Day&quot;
         end
       end
 
       specify 'conjunctions' do
         @book.title = &quot;war and peace&quot;
-        expect(@book.title).to eq(&quot;War and Peace&quot;)
+        @book.title.should == &quot;War and Peace&quot;
       end
 
       specify 'prepositions' do
         @book.title = &quot;love in the time of cholera&quot;
-        expect(@book.title).to eq(&quot;Love in the Time of Cholera&quot;)
+        @book.title.should == &quot;Love in the Time of Cholera&quot;
       end
     end
 
     describe 'should always capitalize...' do
       specify 'I' do
         @book.title = &quot;what i wish i knew when i was 20&quot;
-        expect(@book.title).to eq(&quot;What I Wish I Knew When I Was 20&quot;)
+        @book.title.should == &quot;What I Wish I Knew When I Was 20&quot;
       end
 
       specify 'the first word' do
         @book.title = &quot;the man in the iron mask&quot;
-        expect(@book.title).to eq(&quot;The Man in the Iron Mask&quot;)
+        @book.title.should == &quot;The Man in the Iron Mask&quot;
       end
     end
   end
