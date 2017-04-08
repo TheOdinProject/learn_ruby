@@ -68,5 +68,18 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+  it "word still capitalize start with  one voyelle" do
+    s = translate("Eat")
+    expect(s).to eq("Eatay")
+  end
+  it "word still capitalize start with  one consonant" do
+    s = translate("Banana")
+    expect(s).to eq("Ananabay")
+  end
+
+  it "word still capitalize start with two consonant" do
+    s = translate("Cherry")
+    expect(s).to eq("Errychay")
+  end
 
 end
