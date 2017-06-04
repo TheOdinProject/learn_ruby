@@ -7,7 +7,7 @@
 #
 # # Timer
 
-require 'timer'
+require './timer'
 
 describe "Timer" do
   before(:each) do
