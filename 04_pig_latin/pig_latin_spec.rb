@@ -49,6 +49,11 @@ describe "#translate" do
     s = translate("school")
     expect(s).to eq("oolschay")
   end
+  
+  #it 'counts punctuation marks' do
+  #  s = translate('blue!')
+  #  expect(s).to eq('ueblay!')
+  #end
 
   it "counts 'qu' as a single phoneme" do
     s = translate("quiet")
@@ -65,8 +70,21 @@ describe "#translate" do
     expect(s).to eq("ethay ickquay ownbray oxfay")
   end
 
+  it "assert capitalized words" do
+    s = translate('The Fox')
+    expect(s).to eq ('Ethay Oxfay')
+  end
+
+  it "retains punctation marks" do
+    s = translate('Blue!')
+    expect(s).to eq ('Ueblay!')
+  end
+
   # Test-driving bonus:
-  # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
+  # * write a test asserting that capitalized words are still capitalized 
+  #       (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
 
 end
+
+
