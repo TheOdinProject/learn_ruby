@@ -22,6 +22,24 @@ def sum(array)
 end
 
 
-def multiply(a,b)
-	a * b
+def multiply(array)
+	n = array.length - 1
+	sum = array[n]
+	if sum == nil
+		sum = 0
+	else
+		while n != 0
+			sum = sum * array[n-1]
+			n = n - 1
+		end
+	end
+	sum
+end
+
+def power(a,b)
+	a**b
+end
+
+def factorial #uzyj tablic - 
+
 end
