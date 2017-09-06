@@ -1,7 +1,5 @@
 
 def translate(word)
-	
-
 	n = word.length
 	word = word.split
 	
@@ -44,8 +42,4 @@ def translate(word)
 
 end
 
-
-
-# elsif vowels.include?(word[0] && word[1] && word[2]) == false # translates a word beginning with two consonants
-# 			word = word[2...n] + word[0] + word[1] + word[2] + "ay"
-# 		end
+puts translate("this should be capitalized")
