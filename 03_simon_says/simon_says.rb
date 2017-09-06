@@ -1,6 +1,4 @@
 #write your code here
-	def initialize
-	end
 	def echo(a)
 		echo = a
 	end
@@ -15,16 +13,15 @@
 	end
 
 	def start_of_word(a,b)
-		if b == 1
-		start_of_word = a[b-1]
-		else
-		start_of_word = ""
-		while  b != 1
-		b = b-1
-		start_of_word = a[b-1]
-		b.times do 
-		start_of_word = start_of_word + a[b]
+		b = b -1
+		start_of_word = a[b]
+		
+		n = b-1
+		while b != 0
+			b = b-1
+			start_of_word = a[n] + start_of_word
+			n = n-1
 		end
+
 		start_of_word
-	end
 	end
