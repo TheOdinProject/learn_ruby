@@ -49,14 +49,19 @@ def factorial(a)
 		a = 1 
 	else
 		emptyarray = []
+
 		emptyarray << a
+		
 		a = a+1
+
 		while a != 1
 			emptyarray << a-1
 			a = a-1
 		end
+
 		n = emptyarray.length - 1
 		a = emptyarray[n]
+
 		if a == nil 
 			a = 0 
 		else
