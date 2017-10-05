@@ -20,7 +20,6 @@ def translate(word)
 
 		elsif consonants.include?(word[0...1]) && vowels.include?(word[2]) # translates a word beginning with two consonants
 			
-			puts 'cos'
 				word = word[2...n] + word[0] + word[1] + "ay"
 
 		elsif consonants.include?(word[0] && word[1] && word[2]) && vowels.include?(word[3]) # translates a word beginning with three consonants
@@ -41,5 +40,3 @@ def translate(word)
 	word = word.join(" ")
 
 end
-
-puts translate("this should be capitalized")
