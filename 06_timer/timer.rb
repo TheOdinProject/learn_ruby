@@ -1,6 +1,6 @@
 class Timer
   #write your code here
-  attr_accessor :seconds, :padded # tu już stworzyłem metode seconds 
+  attr_accessor :seconds, :padded # tu już stworzyłem metode seconds. Musze podać także atrybut, zeby byl dostepny dla time_string
 def initialize # tu stworzylem domyślną wartość dla seconds - która równa się 0
 	self.seconds = 0 # musze użyć self!! 
 end
@@ -33,5 +33,3 @@ time_string = padded(h) + ":" + padded(m) + ":" + padded(s)
 
 
 end
-@timer = Timer.new
-@timer.time_string = 00 
