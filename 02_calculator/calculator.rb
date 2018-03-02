@@ -24,14 +24,12 @@ def power(a, b)
   a ** b
 end
 
-def factorial(n)
-  total = n > 0 ? 1 : 0
-
+ def factorial(n)
+  total = 1
   i = 1
   n.times do
     total *= i
     i += 1
   end
-
   total
 end
