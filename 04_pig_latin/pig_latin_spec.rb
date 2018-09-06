@@ -65,8 +65,14 @@ describe "#translate" do
     expect(s).to eq("ethay ickquay ownbray oxfay")
   end
 
-  # Test-driving bonus:
-  # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
-  # * retain the punctuation from the original phrase
+  it "capitalize correct words" do
+    s = translate("A sentence with Capital letters")
+    expect(s).to eq("Aay entencesay ithway Apitalcay etterslay")
+  end
 
+
+  it "retain punctuations" do
+    s = translate("You, me and I are: The same.")
+    expect(s).to eq("Ouyay, emay anday Iay areay: Ethay amesay.")
+  end
 end
