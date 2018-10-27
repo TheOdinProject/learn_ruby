@@ -1,3 +1,14 @@
 class Book
-# write your code here
+
+  def initialize
+  end
+
+  def title
+    .capitalize
+  end
+  
 end
+
+
+puts inferno = Book.new
+puts inferno.title
