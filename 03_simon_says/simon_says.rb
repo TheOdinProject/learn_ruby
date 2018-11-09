@@ -18,9 +18,17 @@ def first_word(word)
     word.split.first
 end
 
-def titleize(sentence)
-    sentence.capitalize
-    no_cap = ["and", "or", "over", "to", "the", "a", "but"]
-    sentence.split(" ").map { |word| no_cap.include?(word) ? word : word.capitalize }
-    
+def titleize(str)
+	arr = str.split(' ')
+	result = []
+	i = 0
+	arr.each do |item|
+		if i == 0 || i == (arr.length - 1)  || item.length > 4
+			result.push(item.capitalize)
+		else
+			result.push(item)
+		end
+		i += 1
+	end
+	result.join(" ")
 end
