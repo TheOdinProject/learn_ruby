@@ -18,17 +18,7 @@ def first_word(word)
     word.split.first
 end
 
-def titleize(str)
-	arr = str.split(' ')
-	result = []
-	i = 0
-	arr.each do |item|
-		if i == 0 || i == (arr.length - 1)  || item.length > 4
-			result.push(item.capitalize)
-		else
-			result.push(item)
-		end
-		i += 1
-	end
-	result.join(" ")
+def titleize(word)
+	small_words = ['the','a','an','is','in','at','of','and','over']
+	word.capitalize.split.map {|idx| small_words.include?(idx)? idx :idx.capitalize}.join' '
 end
