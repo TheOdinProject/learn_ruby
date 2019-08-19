@@ -55,8 +55,8 @@ describe Book do
       end
 
       specify 'prepositions' do
-        @book.title = "love in the time of cholera"
-        expect(@book.title).to eq("Love in the Time of Cholera")
+        @book.title = "travels with charley in search of america"
+        expect(@book.title).to eq("Travels with Charley in Search of America")
       end
     end
 
