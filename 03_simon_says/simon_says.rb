@@ -33,7 +33,7 @@ def titleize phrase
     little_words = ["and", "of", 'a', "the", "over"]
     output = []
     words = phrase.split(' ')
-    words.each_index do |word, index| 
+    words.each_with_index do |word, index| 
         if index == 0 || little_words.index(word) == nil
             output.push word.capitalize
         else
