@@ -29,7 +29,7 @@
 #
 # ## Create the hello function
 #
-# Fix this by opening `hello.rb` and creating an empty function:
+# DONE Fix this by opening `hello.rb` and creating an empty function:
 #
 #     def hello
 #     end
@@ -55,7 +55,7 @@
 #
 # ## Make it return something
 #
-# Inside the "hello" function, put a single line containing a string that is *not* "Hello!". (Here we are simulating you making an honest mistake, so we can see what the error message looks like.)
+# DONE Inside the "hello" function, put a single line containing a string that is *not* "Hello!". (Here we are simulating you making an honest mistake, so we can see what the error message looks like.)
 #
 #     def hello
 #       "whuh?"
@@ -73,7 +73,7 @@
 #               got: "whuh?" (compared using ==)
 #        # ./hello/hello_spec.rb:5:in `block (2 levels) in <top (required)>'
 #
-# Correct this by changing "whuh?" to "Hello!". Save it. Run the test again.
+# DONE Correct this by changing "whuh?" to "Hello!". Save it. Run the test again.
 #
 # ## Watch it pass!
 #
@@ -93,7 +93,7 @@
 #     the greet function
 #       says hello to someone (FAILED - 1)
 #
-# In order to get the next test to pass, your function will need to accept an *argument*.
+# DONE In order to get the next test to pass, your function will need to accept an *argument*.
 #
 #     def greet(who)
 #       "Hello, #{who}!"
