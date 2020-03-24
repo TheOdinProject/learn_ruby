@@ -6,10 +6,8 @@ class Timer
   end
 
   def time_string
-      time = Time.new(0) + @seconds
-      
+      time = Time.new(0) + @seconds  
       return time.strftime("%H:%M:%S")
-    
   end
   
 end
