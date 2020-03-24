@@ -30,6 +30,7 @@ describe Book do
       @book.title = "stuart little"
       expect(@book.title).to eq("Stuart Little")
     end
+  
 
     describe 'should capitalize every word except...' do
       describe 'articles' do
