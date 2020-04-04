@@ -44,17 +44,17 @@ describe "Timer" do
   # One way to implement the Timer is with a helper method.
   # Uncomment these specs if you want to test-drive that
   # method, then call that method from inside of time_string.
-  #
-  # describe 'padded' do
-  #   it 'pads zero' do
-  #     expect(@timer.padded(0)).to eq('00')
-  #   end
-  #   it 'pads one' do
-  #     expect(@timer.padded(1)).to eq('01')
-  #   end
-  #   it "doesn't pad a two-digit number" do
-  #     expect(@timer.padded(12)).to eq('12')
-  #   end
-  # end
+  
+  describe 'padded' do
+    it 'pads zero' do
+      expect(@timer.padded(0)).to eq('00')
+    end
+    it 'pads one' do
+      expect(@timer.padded(1)).to eq('01')
+    end
+    it "doesn't pad a two-digit number" do
+      expect(@timer.padded(12)).to eq('12')
+    end
+  end
 
 end
